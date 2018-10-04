@@ -58,6 +58,7 @@ Handler.prototype.scream = function() {
 Handler.prototype.default = function() {
     this.msg.reply('We haven\'t hack that yet...');
 }
+
 module.exports = {
     Handler: Handler
 }
