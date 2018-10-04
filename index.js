@@ -12,18 +12,29 @@ client.on('message', async(msg) => {
     const command = args.shift().slice(prefix.length).toLowerCase();
     const handler = new Handler(msg, client, args);
     //Add your commands here. Good command handlers are overrated :POGGERS:
-    if (command === 'ping') {
-        handler.ping();
-    } else if (command === 'hello') {
-        handler.hello();
-    } else if (command === 'steak') {
-        handler.steak();
-    } else if (command === 'lul') {
-        handler.lul();
-    } else if (command === 'status') {
-        handler.status();
-    } else if (command === 'scream') {
-        handler.scream();
+
+    switch (command) {
+        case 'ping':
+            handler.ping();
+            break;
+        case 'hello':
+            handler.hello();
+            break;
+        case 'steak':
+            handler.steak();
+            break;
+        case 'lul':
+            handler.lul();
+            break;
+        case 'status':
+            handler.status();
+            break;
+        case 'scream':
+            handler.scream();
+            break;
+        default:
+            handler.default();
+            break;
     }
 })
 

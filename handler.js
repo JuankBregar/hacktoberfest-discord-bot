@@ -54,6 +54,10 @@ Handler.prototype.status = async function() {
 Handler.prototype.scream = function() {
     this.msg.reply(this.args[0].toUpperCase());
 }
+
+Handler.prototype.default = function() {
+    this.msg.reply('We haven\'t hack that yet...');
+}
 module.exports = {
     Handler: Handler
 }
